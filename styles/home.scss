@@ -1,6 +1,6 @@
 
     body {
-      background: white;
+      background: #CB819A;
       color: black;
       font-family: 'Open Sans', sans-serif;
       font-size: 14px;
@@ -8,7 +8,7 @@
     }
 
     .chatbar {
-      background: tomato;
+      background: #681430;
       border-top: 1px solid black;
       bottom: 0;
       display: flex;
@@ -30,10 +30,12 @@
 
     .chatbar-message {
       flex: 8;
+      background-color: #E7B5C6;
     }
 
     .chatbar-username {
       flex: 2;
+      background-color: #E7B5C6;
     }
 
     .message {
@@ -63,7 +65,7 @@
     }
 
     .navbar {
-      background: tomato;
+      background: #A8516E;
       border-bottom: 1px solid black;
       height: 60px;
       left: 0;
@@ -74,13 +76,19 @@
     }
 
     .navbar-brand {
-      color: inherit;
+      color: #681430;
       display: block;
       float: left;
+      font-family: 'Luckiest Guy', cursive;
       font-weight: 700;
       font-size: 28px;
-      height: 60px;
+      height: 70px;
+      letter-spacing: .3em;
       line-height: 60px;
       padding: 0 10px;
       text-decoration: none;
+    }
+    .navbar-users {
+      float: right;
+      padding-top: 20px; 
     }
