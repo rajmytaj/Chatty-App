@@ -9,29 +9,31 @@ class ChatBar extends Component {
       content: '',
     };
   }
+
+  // message content is sent on enter 
   handleKeyPress = (event) => {
     if (event.key === 'Enter') {
       this.onMessage();
     }
   }
 
+  // sets content of message
   handleChange = (event) => {
     this.setState({ content: event.target.value });
   }
 
+  // clears message input box on enter
   onMessage() {
     this.props.onNewMessage(this.state.content);
     this.setState({ content: '' });
   }
 
-
+  // sets username 
   handleUserChange = (event) => {
     this.setState({ username: event.target.value });
   }
 
-  // an update message is only sent when a user leaves focus from the
-  // change username input field 
-  // users generally dont have to press enter on change
+  // username update is sent on focus loss of input field 
   onLeaveFocus = (event) => {
     this.props.onNameChange(event.target.value);
   }
@@ -41,7 +43,7 @@ class ChatBar extends Component {
       <footer className="chatbar">
         <input
           className="chatbar-username"
-          placeholder="Your Name (Optional)"
+          placeholder="Your name (Optional)"
           defaultValue={this.props.currentUser ? this.props.currentUser.name : undefined}
           onChange={this.handleUserChange}
           onBlur={this.onLeaveFocus}
