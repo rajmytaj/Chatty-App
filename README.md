@@ -17,9 +17,14 @@ Install the dependencies in both the main chatty-app folder and chatty-server
 
 ### How to run 
 ```
+cd chatty-app
 npm install
 npm start
+// in new terminal
+cd chatty-server
+node server.js
 open http://localhost:3000
+
 ```
 ### Dependencies
 
